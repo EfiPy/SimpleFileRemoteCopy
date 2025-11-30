@@ -1,3 +1,10 @@
+# SimpleFileRemoteSink.py
+#
+#   part of EfiPy2
+#
+# Copyright (C) 2025 MaxWu efipy.core@gmail.com
+#   GPL-2.0
+#
 import struct
 import socket
 import sys
@@ -63,7 +70,7 @@ def receive_file(port):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python Sink.py <port>")
+        print("Usage: python Sink.py <TCP Port>")
         sys.exit(1)
 
     receive_file(int(sys.argv[1]))

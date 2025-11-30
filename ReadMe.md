@@ -1,22 +1,18 @@
 # Introduction
-File transfer script run in UEFI shell as simple as possible.
+Simple File transfer script run in as simple as possible.
 
-Source.py - File copy to.
+SimpleFileRemoteSource.py - File copy to.
 ```
-python Source.py <host> <port> <file_path>
+python SimpleFileRemoteSource.py <host> <TCP port> <file_path>
 ```
-
-Sink.py - File copy from.
+SimpleFileRemoteSink.py - File copy from.
 ```
-python Sink.py <port>
+python SimpleFileRemoteSink.py <TCP port>
 ```
-
 # Description
 We do not want complex protocol and complex multitask process.
 
-This just do simple file transfer.
-
-Transfer done and stop script.
+This just do simple file transfer over Network TCP protocol.
 
 # Protocol
 ```
@@ -28,5 +24,9 @@ struct {
   UINT8  FileBuff [FileLength];
   UINT32 CRC32;                             // Big endian
 }
-
 ```
+# Working Environment
+
+* UEFI shell
+* Windows
+* Linux

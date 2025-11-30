@@ -1,3 +1,10 @@
+# SimpleFileRemoteSource.py
+#
+#   part of EfiPy2
+#
+# Copyright (C) 2025 MaxWu efipy.core@gmail.com
+#   GPL-2.0
+#
 import socket
 import struct
 import sys
@@ -36,7 +43,7 @@ def send_file(host, port, file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python Source.py <host> <port> <file_path>")
+        print("Usage: python Source.py <host> <TCP Port> <file_path>")
         sys.exit(1)
 
     send_file(sys.argv[1], int(sys.argv[2]), sys.argv[3])
